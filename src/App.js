@@ -26,11 +26,22 @@ function App() {
 function Child() {
   console.log("child component");
 
+  // Proses berat
+  // delay(1000);
+
   return (
     <div style={{ marginTop: "30px" }}>
       Child Component <button>Like</button>
     </div>
   );
+}
+
+function delay(delay) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < delay);
 }
 
 export default App;
